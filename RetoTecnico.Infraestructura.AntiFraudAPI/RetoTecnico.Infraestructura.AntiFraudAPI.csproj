@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RetoTecnico.Aplicacion.AntiFraud\RetoTecnico.Aplicacion.AntiFraud.csproj" />
+    <ProjectReference Include="..\RetoTecnico.Infraestructura.Kafka\RetoTecnico.Infraestructura.Kafka.csproj" />
+    <ProjectReference Include="..\RetoTecnico.Infraestructura.PostgreSql\RetoTecnico.Infraestructura.PostgreSql.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Adapter\" />
+  </ItemGroup>
+
+</Project>

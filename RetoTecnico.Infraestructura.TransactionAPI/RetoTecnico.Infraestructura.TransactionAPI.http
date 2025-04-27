@@ -1,0 +1,6 @@
+@RetoTecnico.Infraestructura.TransactionAPI_HostAddress = http://localhost:5194
+
+GET {{RetoTecnico.Infraestructura.TransactionAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

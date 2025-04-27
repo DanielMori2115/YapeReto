@@ -1,0 +1,6 @@
+@RetoTecnico.Infraestructura.AntiFraudAPI_HostAddress = http://localhost:5263
+
+GET {{RetoTecnico.Infraestructura.AntiFraudAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
