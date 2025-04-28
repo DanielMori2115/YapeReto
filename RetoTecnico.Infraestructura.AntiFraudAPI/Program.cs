@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
 using RetoTecnico.Aplicacion.CasoUso;
+using RetoTecnico.Aplicacion.Interfaces;
 using RetoTecnico.Aplicacion.Interfaces.Repository;
 using RetoTecnico.Aplicacion.Interfaces.Service;
 using RetoTecnico.Aplicacion.Mapper;
@@ -19,6 +20,7 @@ builder.Services.AddAutoMapper(typeof(TransactionProfile));
 builder.Services.AddDbContext<NpgsqlContext>(options => options.UseNpgsql(connStr));
 
 // Add services to the container.
+builder.Services.AddScoped<IProducerKafkaAdapter, ProducerKafkaAdapter>();
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
 builder.Services.AddScoped<ITransactionService, TransactionService>();
 
