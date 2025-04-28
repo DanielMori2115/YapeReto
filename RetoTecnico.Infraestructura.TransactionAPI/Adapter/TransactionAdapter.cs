@@ -30,8 +30,13 @@ namespace RetoTecnico.Infraestructura.TransactionAPI.Adapter
             await transactionService.ProcessTransaction(pendingTransaction, server, topic);
 
             var transaction = transactionService.SeleccionarPorID(pendingTransaction.TransactionId);
+            var response = new AddTransactionResponseDto
+            {
+                CreatedAt = transaction.TransactionDate,
+                TransactionExternalId = transaction.TransactionId.ToString()
+            };
 
-            return Ok(transaction);
+            return Ok(response);
         }
     }
 }
