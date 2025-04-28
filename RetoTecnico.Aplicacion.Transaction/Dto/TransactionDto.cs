@@ -1,4 +1,4 @@
-﻿namespace RetoTecnico.Aplicacion.AntiFraud.Dto;
+﻿namespace RetoTecnico.Aplicacion.Transaction.Dto;
 
 public class TransactionDto
 {

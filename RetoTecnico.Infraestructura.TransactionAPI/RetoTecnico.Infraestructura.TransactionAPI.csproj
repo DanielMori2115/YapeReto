@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RetoTecnico.Aplicacion.Transaction\RetoTecnico.Aplicacion.Transaction.csproj" />
+    <ProjectReference Include="..\RetoTecnico.Infraestructura.Kafka\RetoTecnico.Infraestructura.Kafka.csproj" />
   </ItemGroup>
 
 </Project>

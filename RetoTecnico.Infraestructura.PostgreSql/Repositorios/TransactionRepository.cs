@@ -1,4 +1,4 @@
-﻿using RetoTecnico.Dominio.Interfaces.Repositorios;
+﻿using RetoTecnico.Aplicacion.Transaction.Interfaces;
 using RetoTecnico.Dominio.Models;
 using RetoTecnico.Infraestructura.PostgreSql.Contextos;
 

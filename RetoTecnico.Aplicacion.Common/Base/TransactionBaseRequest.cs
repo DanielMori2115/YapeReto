@@ -1,4 +1,4 @@
-﻿namespace RetoTecnico.Dominio.Models;
+﻿namespace RetoTecnico.Aplicacion.Common.Base;
 
 public class TransactionBaseRequest
 {

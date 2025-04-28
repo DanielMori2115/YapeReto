@@ -1,8 +1,10 @@
 ﻿using Confluent.Kafka;
+
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RetoTecnico.Aplicacion.AntiFraud.CasoUso;
+
+using RetoTecnico.Aplicacion.Transaction.Interfaces;
 
 namespace RetoTecnico.Infraestructura.Kafka.Adapter;
 

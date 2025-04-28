@@ -1,9 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 
-using RetoTecnico.Aplicacion.AntiFraud.CasoUso;
-using RetoTecnico.Aplicacion.AntiFraud.Mapper;
-
-using RetoTecnico.Dominio.Interfaces.Repositorios;
+using RetoTecnico.Aplicacion.Transaction.CasoUso;
+using RetoTecnico.Aplicacion.Transaction.Interfaces;
+using RetoTecnico.Aplicacion.Transaction.Mapper;
 
 using RetoTecnico.Infraestructura.Kafka.Adapter;
 using RetoTecnico.Infraestructura.PostgreSql.Contextos;
@@ -17,7 +16,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddAutoMapper(typeof(AntiFraudProfile));
+builder.Services.AddAutoMapper(typeof(TransactionProfile));
 builder.Services.AddDbContext<TransactionContext>(options => options.UseNpgsql(connStr));
 
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
