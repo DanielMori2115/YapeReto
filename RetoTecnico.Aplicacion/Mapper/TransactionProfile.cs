@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
+using RetoTecnico.Aplicacion.Dto;
 
-using RetoTecnico.Aplicacion.Transaction.Dto;
-
-namespace RetoTecnico.Aplicacion.Transaction.Mapper;
+namespace RetoTecnico.Aplicacion.Mapper;
 
 public class TransactionProfile : Profile
 {

@@ -9,15 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Infraestructura
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Infraestructura.Kafka", "RetoTecnico.Infraestructura.Kafka\RetoTecnico.Infraestructura.Kafka.csproj", "{2E761AFD-ADD5-4CB0-860B-6FABA1C4B5FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Aplicacion.AntiFraud", "RetoTecnico.Aplicacion.AntiFraud\RetoTecnico.Aplicacion.AntiFraud.csproj", "{0573BDC0-D4C3-4BB3-B146-9DC40A978D37}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Aplicacion.Transaction", "RetoTecnico.Aplicacion.Transaction\RetoTecnico.Aplicacion.Transaction.csproj", "{6672E1BE-816D-4B0F-A10C-3444A319DF7D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Infraestructura.TransactionAPI", "RetoTecnico.Infraestructura.TransactionAPI\RetoTecnico.Infraestructura.TransactionAPI.csproj", "{0879429D-5FEE-44BB-892A-8ABB223AF61B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Infraestructura.AntiFraudAPI", "RetoTecnico.Infraestructura.AntiFraudAPI\RetoTecnico.Infraestructura.AntiFraudAPI.csproj", "{5BB5D9D9-1FD7-44FD-861B-10354D57AC0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Aplicacion.Common", "RetoTecnico.Aplicacion.Common\RetoTecnico.Aplicacion.Common.csproj", "{70ECB450-B740-4226-A145-F19CE9B73DC9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Aplicacion", "RetoTecnico.Aplicacion\RetoTecnico.Aplicacion.csproj", "{27194C3D-8868-4F2F-B2AA-4F36E4BF6ED4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +33,6 @@ Global
 		{2E761AFD-ADD5-4CB0-860B-6FABA1C4B5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E761AFD-ADD5-4CB0-860B-6FABA1C4B5FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E761AFD-ADD5-4CB0-860B-6FABA1C4B5FF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0573BDC0-D4C3-4BB3-B146-9DC40A978D37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0573BDC0-D4C3-4BB3-B146-9DC40A978D37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0573BDC0-D4C3-4BB3-B146-9DC40A978D37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0573BDC0-D4C3-4BB3-B146-9DC40A978D37}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6672E1BE-816D-4B0F-A10C-3444A319DF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6672E1BE-816D-4B0F-A10C-3444A319DF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6672E1BE-816D-4B0F-A10C-3444A319DF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6672E1BE-816D-4B0F-A10C-3444A319DF7D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0879429D-5FEE-44BB-892A-8ABB223AF61B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0879429D-5FEE-44BB-892A-8ABB223AF61B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0879429D-5FEE-44BB-892A-8ABB223AF61B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,12 +41,15 @@ Global
 		{5BB5D9D9-1FD7-44FD-861B-10354D57AC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BB5D9D9-1FD7-44FD-861B-10354D57AC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BB5D9D9-1FD7-44FD-861B-10354D57AC0A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70ECB450-B740-4226-A145-F19CE9B73DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70ECB450-B740-4226-A145-F19CE9B73DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70ECB450-B740-4226-A145-F19CE9B73DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70ECB450-B740-4226-A145-F19CE9B73DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27194C3D-8868-4F2F-B2AA-4F36E4BF6ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27194C3D-8868-4F2F-B2AA-4F36E4BF6ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27194C3D-8868-4F2F-B2AA-4F36E4BF6ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27194C3D-8868-4F2F-B2AA-4F36E4BF6ED4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC831DD8-1F8F-42A8-B061-082531E520D7}
 	EndGlobalSection
 EndGlobal

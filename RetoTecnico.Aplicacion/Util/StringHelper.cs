@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace RetoTecnico.Aplicacion.Common.Util;
+namespace RetoTecnico.Aplicacion.Util;
 
 public static class StringHelper
 {

@@ -1,4 +1,4 @@
-﻿namespace RetoTecnico.Aplicacion.Common.Base;
+﻿namespace RetoTecnico.Aplicacion.Base;
 
 public class TransactionBaseRequest
 {

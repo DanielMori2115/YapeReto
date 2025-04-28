@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 
-using RetoTecnico.Aplicacion.Transaction.Dto;
-using RetoTecnico.Aplicacion.Transaction.Interfaces;
+using RetoTecnico.Aplicacion.Dto;
+using RetoTecnico.Aplicacion.Interfaces.Service;
+using RetoTecnico.Dominio.Enum;
 
 namespace RetoTecnico.Infraestructura.TransactionAPI.Adapter
 {
@@ -15,21 +16,22 @@ namespace RetoTecnico.Infraestructura.TransactionAPI.Adapter
             var server = configuration["Kafka:BootstrapServers"];
             var topic = configuration["Kafka:Topic"];
 
-            var isValid = await transactionService.ValidateTransaction(addTransactionDto, server, topic);
-
-            if (!isValid) throw new BadHttpRequestException("Lo sentimos, no se pudo procesar su solicitud");
-
             var transactionDto = new TransactionDto
             {
                 Value = addTransactionDto.Value,
                 SourceAccountId = addTransactionDto.SourceAccountId,
                 TargetAccountId = addTransactionDto.TargetAccountId,
-                TransactionDate = DateTime.Now
+                TransactionDate = DateTime.Now,
+                TransactionTypeId = (int)TransactionTypeEnum.Pending
             };
 
-            var newTransaction = transactionService.Agregar(transactionDto);
+            var pendingTransaction = transactionService.Agregar(transactionDto);
 
-            return Ok(newTransaction != null);
+            await transactionService.ProcessTransaction(pendingTransaction, server, topic);
+
+            var transaction = transactionService.SeleccionarPorID(pendingTransaction.TransactionId);
+
+            return Ok(transaction);
         }
     }
 }

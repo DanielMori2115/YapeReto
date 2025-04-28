@@ -1,9 +1,10 @@
-﻿using RetoTecnico.Aplicacion.Common.Interfaces;
+﻿using Confluent.Kafka;
 
-using Confluent.Kafka;
 using System.Diagnostics;
 using System.Net;
-using RetoTecnico.Aplicacion.Common.Base;
+
+using RetoTecnico.Aplicacion.Base;
+using RetoTecnico.Aplicacion.Interfaces;
 
 namespace RetoTecnico.Infraestructura.Kafka.Adapter;
 

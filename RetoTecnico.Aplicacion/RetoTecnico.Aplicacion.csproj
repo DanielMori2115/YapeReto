@@ -3,21 +3,16 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>disable</Nullable>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="14.0.0" />
     <PackageReference Include="Confluent.Kafka" Version="2.10.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RetoTecnico.Aplicacion.Common\RetoTecnico.Aplicacion.Common.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\RetoTecnico.Dominio\RetoTecnico.Dominio.csproj" />
   </ItemGroup>
 
 </Project>

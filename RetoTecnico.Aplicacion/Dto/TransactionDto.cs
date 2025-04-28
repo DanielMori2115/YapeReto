@@ -1,4 +1,4 @@
-﻿namespace RetoTecnico.Aplicacion.Transaction.Dto;
+﻿namespace RetoTecnico.Aplicacion.Dto;
 
 public class TransactionDto
 {
@@ -6,5 +6,6 @@ public class TransactionDto
     public string SourceAccountId { get; set; }
     public string TargetAccountId { get; set; }
     public DateTime TransactionDate { get; set; }
+    public int TransactionTypeId { get; set; }
     public decimal Value { get; set; }
 }

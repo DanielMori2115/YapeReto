@@ -1,4 +1,4 @@
-﻿namespace RetoTecnico.Aplicacion.Transaction.Dto
+﻿namespace RetoTecnico.Aplicacion.Dto
 {
     public class AddTransactionDto
     {

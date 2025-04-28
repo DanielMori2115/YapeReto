@@ -1,17 +1,35 @@
-﻿using RetoTecnico.Aplicacion.Transaction.Interfaces;
+﻿using Microsoft.EntityFrameworkCore.Storage;
+
+using RetoTecnico.Aplicacion.Interfaces.Repository;
 using RetoTecnico.Dominio.Models;
 using RetoTecnico.Infraestructura.PostgreSql.Contextos;
 
 namespace RetoTecnico.Infraestructura.PostgreSql.Repositorios;
 
-public class TransactionRepository(TransactionContext context) : ITransactionRepository
+public class TransactionRepository(NpgsqlContext context) : ITransactionRepository
 {
-    private readonly TransactionContext _context = context;
+    private readonly NpgsqlContext _context = context;
+    private IDbContextTransaction _transactionScope;
 
     public Transaction Agregar(Transaction entidad)
     {
         context.Transactions.Add(entidad);
         return entidad;
+    }
+
+    public void BeginTransaction()
+    {
+        _transactionScope = _context.Database.BeginTransaction();
+    }
+
+    public void CommitTransaction()
+    {
+        _transactionScope?.Commit();
+    }
+
+    public void RollbackTransaction()
+    {
+        _transactionScope?.Rollback();
     }
 
     public void Editar(Transaction entidad)

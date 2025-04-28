@@ -1,12 +1,11 @@
-﻿namespace RetoTecnico.Dominio.Models
+﻿namespace RetoTecnico.Dominio.Models;
+
+public class Transaction 
 {
-    public class Transaction 
-    {
-        public long TransactionId { get; set; }
-        public string SourceAccountId { get; set; }
-        public string TargetAccountId { get; set; }
-        public DateTime TransactionDate { get; set; }
-        public int TransactionTypeId { get; set; }
-        public decimal Value { get; set; }
-    }
+    public long TransactionId { get; set; }
+    public string SourceAccountId { get; set; }
+    public string TargetAccountId { get; set; }
+    public DateTime TransactionDate { get; set; }
+    public int TransactionTypeId { get; set; }
+    public decimal Value { get; set; }
 }

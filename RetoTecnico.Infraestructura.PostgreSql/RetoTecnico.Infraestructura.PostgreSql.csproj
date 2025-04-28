@@ -11,8 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RetoTecnico.Aplicacion.AntiFraud\RetoTecnico.Aplicacion.AntiFraud.csproj" />
-    <ProjectReference Include="..\RetoTecnico.Aplicacion.Transaction\RetoTecnico.Aplicacion.Transaction.csproj" />
+    <ProjectReference Include="..\RetoTecnico.Aplicacion\RetoTecnico.Aplicacion.csproj" />
   </ItemGroup>
 
 </Project>

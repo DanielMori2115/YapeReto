@@ -1,6 +1,6 @@
-﻿using RetoTecnico.Aplicacion.Common.Base;
+﻿using RetoTecnico.Aplicacion.Base;
 
-namespace RetoTecnico.Aplicacion.Common.Interfaces;
+namespace RetoTecnico.Aplicacion.Interfaces;
 
 public interface IProducerKafkaAdapter
 {

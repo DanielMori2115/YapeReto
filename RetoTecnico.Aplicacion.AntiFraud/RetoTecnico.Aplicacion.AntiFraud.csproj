@@ -20,8 +20,8 @@
   <ItemGroup>
     <Folder Include="CasoUso\" />
     <Folder Include="Dto\" />
-    <Folder Include="Mapper\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Mapper\" />
   </ItemGroup>
 
   <ItemGroup>
