@@ -21,7 +21,7 @@ namespace RetoTecnico.Infraestructura.TransactionAPI.Adapter
                 Value = addTransactionDto.Value,
                 SourceAccountId = addTransactionDto.SourceAccountId,
                 TargetAccountId = addTransactionDto.TargetAccountId,
-                TransactionDate = DateTime.Now,
+                TransactionDate = DateTime.Now.ToUniversalTime(),
                 TransactionTypeId = (int)TransactionTypeEnum.Pending
             };
 

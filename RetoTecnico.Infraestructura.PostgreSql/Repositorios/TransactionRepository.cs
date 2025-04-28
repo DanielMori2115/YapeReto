@@ -40,8 +40,9 @@ public class TransactionRepository(NpgsqlContext context) : ITransactionReposito
 
         productoSeleccionado.SourceAccountId = entidad.SourceAccountId;
         productoSeleccionado.TargetAccountId = entidad.TargetAccountId;
-        productoSeleccionado.TransactionDate = entidad.TransactionDate;
         productoSeleccionado.Value = entidad.Value;
+        productoSeleccionado.TransactionTypeId = entidad.TransactionTypeId;
+        productoSeleccionado.TransactionDate = entidad.TransactionDate.ToUniversalTime();
 
         _context.Entry(productoSeleccionado).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
     }
