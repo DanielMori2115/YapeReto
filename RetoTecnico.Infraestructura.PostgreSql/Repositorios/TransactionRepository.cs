@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.Extensions.DependencyInjection;
 
 using RetoTecnico.Aplicacion.Interfaces.Repository;
 using RetoTecnico.Dominio.Models;
@@ -6,14 +7,14 @@ using RetoTecnico.Infraestructura.PostgreSql.Contextos;
 
 namespace RetoTecnico.Infraestructura.PostgreSql.Repositorios;
 
-public class TransactionRepository(NpgsqlContext context) : ITransactionRepository
+public class TransactionRepository(IServiceProvider serviceProvider) : ITransactionRepository
 {
-    private readonly NpgsqlContext _context = context;
+    private readonly NpgsqlContext _context = serviceProvider.GetService<NpgsqlContext>();
     private IDbContextTransaction _transactionScope;
 
     public Transaction Agregar(Transaction entidad)
     {
-        context.Transactions.Add(entidad);
+        _context.Transactions.Add(entidad);
         return entidad;
     }
 

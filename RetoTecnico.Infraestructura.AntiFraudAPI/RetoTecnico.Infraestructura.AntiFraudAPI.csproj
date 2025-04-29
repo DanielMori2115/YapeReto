@@ -13,7 +13,6 @@
   <ItemGroup>
     <ProjectReference Include="..\RetoTecnico.Aplicacion\RetoTecnico.Aplicacion.csproj" />
     <ProjectReference Include="..\RetoTecnico.Infraestructura.Kafka\RetoTecnico.Infraestructura.Kafka.csproj" />
-    <ProjectReference Include="..\RetoTecnico.Infraestructura.PostgreSql\RetoTecnico.Infraestructura.PostgreSql.csproj" />
   </ItemGroup>
 
   <ItemGroup>

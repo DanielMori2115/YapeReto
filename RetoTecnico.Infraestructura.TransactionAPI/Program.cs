@@ -5,6 +5,7 @@ using RetoTecnico.Aplicacion.Interfaces;
 using RetoTecnico.Aplicacion.Interfaces.Repository;
 using RetoTecnico.Aplicacion.Interfaces.Service;
 using RetoTecnico.Aplicacion.Mapper;
+
 using RetoTecnico.Infraestructura.Kafka.Adapter;
 using RetoTecnico.Infraestructura.PostgreSql.Contextos;
 using RetoTecnico.Infraestructura.PostgreSql.Repositorios;
