@@ -14,10 +14,10 @@ namespace RetoTecnico.Infraestructura.PostgreSqlTest.Repositorios
     public class TransactionRepositoryTest : BaseTest
     {
         [Fact]
-        public async Task Test1()
+        public async Task Agregar_Success()
         {
             var mockedProvider = Substitute.For<IServiceProvider>();
-            var database = nameof(Test1);
+            var database = nameof(Agregar_Success);
             var mockedContext = await GetMockContext(database);
             mockedProvider.GetService<NpgsqlContext>().Returns(mockedContext);
 
