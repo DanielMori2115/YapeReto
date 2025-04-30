@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RetoTecnico.Aplicacion\RetoTecnico.Aplicacion.csproj" />
     <ProjectReference Include="..\RetoTecnico.Common.Test\RetoTecnico.Common.Test.csproj" />
   </ItemGroup>
 

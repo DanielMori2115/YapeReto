@@ -6,6 +6,7 @@ using RetoTecnico.Aplicacion.Interfaces;
 using RetoTecnico.Aplicacion.Interfaces.Repository;
 using RetoTecnico.Aplicacion.Interfaces.Service;
 using RetoTecnico.Aplicacion.Util;
+using RetoTecnico.Dominio.Enum;
 using RetoTecnico.Dominio.Models;
 
 namespace RetoTecnico.Aplicacion.CasoUso;
@@ -92,5 +93,16 @@ public class TransactionService(
         var response = await producerKafkaAdapter.ExecuteAsync(request);
 
         return await Task.FromResult(response);
+    }
+
+   public void ValidateTransaction(int transactionId)
+    {
+        const int maxTransactionValue = 2000;
+
+        var transaction = SeleccionarPorID(transactionId);
+
+        transaction.TransactionTypeId = transaction.Value > maxTransactionValue ? (int)TransactionTypeEnum.Rejected : (int)TransactionTypeEnum.Approved;
+
+        Editar(transaction);
     }
 }

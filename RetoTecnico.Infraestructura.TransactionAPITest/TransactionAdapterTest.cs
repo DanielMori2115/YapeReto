@@ -27,19 +27,11 @@ public class TransactionAdapterTest
         const long transactionId = 111;
 
         var request = new AddTransactionDto();
-        var responseDto = new TransactionDto
-        {
-            TransactionId = transactionId
-        };
-
-        var response = new AddTransactionResponseDto
-        {
-            TransactionExternalId = transactionId.ToString()
-        };
+        var responseDto = new TransactionDto { TransactionId = transactionId };
+        var response = new AddTransactionResponseDto { TransactionExternalId = transactionId.ToString() };
 
         _mockTransactionService.Agregar(Arg.Any<TransactionDto>()).Returns(responseDto);
         _mockTransactionService.SeleccionarPorID(Arg.Any<long>()).Returns(responseDto);
-
         _adapter = new TransactionAdapter(_mockConfiguration, _mockTransactionService);
 
         // Act

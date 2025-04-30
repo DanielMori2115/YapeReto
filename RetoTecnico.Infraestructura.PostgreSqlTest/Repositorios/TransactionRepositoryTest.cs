@@ -3,9 +3,8 @@
 using NSubstitute;
 
 using RetoTecnico.Aplicacion.Interfaces.Repository;
-
-using RetoTecnico.Common.Test;
-
+using RetoTecnico.Common.Test.Base;
+using RetoTecnico.Common.Test.Seeds;
 using RetoTecnico.Infraestructura.PostgreSql.Contextos;
 using RetoTecnico.Infraestructura.PostgreSql.Repositorios;
 
@@ -23,6 +22,11 @@ namespace RetoTecnico.Infraestructura.PostgreSqlTest.Repositorios
 
             var repository = new TransactionRepository(mockedProvider);
             mockedProvider.GetService<ITransactionRepository>().Returns(repository);
+
+            await mockedContext.SeedTestingTransactionsAsync();
+            SeedTestingTransactions.SetupMockRepositories(mockedProvider);
+
+
         }
     }
 }

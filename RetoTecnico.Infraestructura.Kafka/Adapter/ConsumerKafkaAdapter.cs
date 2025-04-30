@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using RetoTecnico.Aplicacion.Interfaces.Service;
-using RetoTecnico.Dominio.Enum;
 
 namespace RetoTecnico.Infraestructura.Kafka.Adapter;
 
@@ -50,8 +49,6 @@ public class ConsumerKafkaAdapter : BackgroundService
     {
         try
         {
-            const int maxTransactionValue = 2000;
-
             var consumeResult = _consumer.Consume(stoppingToken);
             var message = consumeResult.Message.Value.Split("::transactionId::");
 
@@ -63,11 +60,7 @@ public class ConsumerKafkaAdapter : BackgroundService
             {
                 var transactionService = scope.ServiceProvider.GetRequiredService<ITransactionService>();
 
-                var transaction = transactionService.SeleccionarPorID(transactionId);
-
-                transaction.TransactionTypeId = transaction.Value > maxTransactionValue ? (int) TransactionTypeEnum.Rejected : (int)TransactionTypeEnum.Approved;
-
-                transactionService.Editar(transaction);
+                transactionService.ValidateTransaction(transactionId);
             }
         }
         catch (Exception ex)

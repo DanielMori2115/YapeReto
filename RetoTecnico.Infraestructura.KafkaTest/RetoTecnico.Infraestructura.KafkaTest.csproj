@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RetoTecnico.Common.Test\RetoTecnico.Common.Test.csproj" />
+    <ProjectReference Include="..\RetoTecnico.Infraestructura.Kafka\RetoTecnico.Infraestructura.Kafka.csproj" />
   </ItemGroup>
 
   <ItemGroup>

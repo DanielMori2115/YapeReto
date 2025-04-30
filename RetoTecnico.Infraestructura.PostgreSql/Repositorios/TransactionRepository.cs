@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
 
 using RetoTecnico.Aplicacion.Interfaces.Repository;
@@ -20,17 +21,23 @@ public class TransactionRepository(IServiceProvider serviceProvider) : ITransact
 
     public void BeginTransaction()
     {
-        _transactionScope = _context.Database.BeginTransaction();
+        var isRelational = _context.Database.IsRelational();
+
+        if(isRelational) _transactionScope = _context.Database.BeginTransaction();
     }
 
     public void CommitTransaction()
     {
-        _transactionScope?.Commit();
+        var isRelational = _context.Database.IsRelational();
+
+        if (isRelational) _transactionScope?.Commit();
     }
 
     public void RollbackTransaction()
     {
-        _transactionScope?.Rollback();
+        var isRelational = _context.Database.IsRelational();
+
+        if (isRelational) _transactionScope?.Rollback();
     }
 
     public void Editar(Transaction entidad)

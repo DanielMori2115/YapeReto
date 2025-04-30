@@ -19,12 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{02EA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Aplicacion.Test", "RetoTecnico.Aplicacion.Test\RetoTecnico.Aplicacion.Test.csproj", "{2BB2791F-3199-4BB6-8DBF-41AE5BCB595A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Infraestructura.AntiFraudAPITest", "RetoTecnico.Infraestructura.AntiFraudAPITest\RetoTecnico.Infraestructura.AntiFraudAPITest.csproj", "{AC035A3B-B01F-4AD3-8944-C02929A0BBC7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Infraestructura.KafkaTest", "RetoTecnico.Infraestructura.KafkaTest\RetoTecnico.Infraestructura.KafkaTest.csproj", "{DFD528CC-90A4-402A-8BEA-D21929A27015}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Infraestructura.PostgreSqlTest", "RetoTecnico.Infraestructura.PostgreSqlTest\RetoTecnico.Infraestructura.PostgreSqlTest.csproj", "{6DCF5646-F3A8-49F8-A6C8-33443BA0E577}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Infraestructura.TransactionAPITest", "RetoTecnico.Infraestructura.TransactionAPITest\RetoTecnico.Infraestructura.TransactionAPITest.csproj", "{EB8B513A-CD62-4BDB-ADF9-8AA79994A274}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoTecnico.Common.Test", "RetoTecnico.Common.Test\RetoTecnico.Common.Test.csproj", "{B06FBE56-6F7D-4211-8183-86E3AC0D3E8E}"
@@ -63,18 +57,6 @@ Global
 		{2BB2791F-3199-4BB6-8DBF-41AE5BCB595A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BB2791F-3199-4BB6-8DBF-41AE5BCB595A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BB2791F-3199-4BB6-8DBF-41AE5BCB595A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC035A3B-B01F-4AD3-8944-C02929A0BBC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC035A3B-B01F-4AD3-8944-C02929A0BBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC035A3B-B01F-4AD3-8944-C02929A0BBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC035A3B-B01F-4AD3-8944-C02929A0BBC7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DFD528CC-90A4-402A-8BEA-D21929A27015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFD528CC-90A4-402A-8BEA-D21929A27015}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFD528CC-90A4-402A-8BEA-D21929A27015}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFD528CC-90A4-402A-8BEA-D21929A27015}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6DCF5646-F3A8-49F8-A6C8-33443BA0E577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DCF5646-F3A8-49F8-A6C8-33443BA0E577}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6DCF5646-F3A8-49F8-A6C8-33443BA0E577}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DCF5646-F3A8-49F8-A6C8-33443BA0E577}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EB8B513A-CD62-4BDB-ADF9-8AA79994A274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EB8B513A-CD62-4BDB-ADF9-8AA79994A274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB8B513A-CD62-4BDB-ADF9-8AA79994A274}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -89,9 +71,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2BB2791F-3199-4BB6-8DBF-41AE5BCB595A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{AC035A3B-B01F-4AD3-8944-C02929A0BBC7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{DFD528CC-90A4-402A-8BEA-D21929A27015} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{6DCF5646-F3A8-49F8-A6C8-33443BA0E577} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{EB8B513A-CD62-4BDB-ADF9-8AA79994A274} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{B06FBE56-6F7D-4211-8183-86E3AC0D3E8E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
